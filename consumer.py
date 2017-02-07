@@ -10,12 +10,13 @@ def main():
 def startconsume(server_address):
     '''The consume function'''
     print 'start consumption..'
-    consumer = KafkaConsumer('data-raw', bootstrap_servers=server_address)
+    consumer = KafkaConsumer(bootstrap_servers=server_address, auto_offset_reset='earliest')
+    consumer.subscribe(['data-raw'])
     print 'connected.'
     for msg in consumer:
-        print msg.value
+        print 'received message: ' + msg.value
 
-    print 'done.'
+    print 'consume done.'
 
 if __name__ == '__main__':
     main()

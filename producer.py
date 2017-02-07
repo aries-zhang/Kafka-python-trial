@@ -13,7 +13,7 @@ def produce(server_address):
     producer = KafkaProducer(bootstrap_servers=server_address)
     print 'connected.'
     for _ in range(10):
-        producer.send('data-raw', b'some_message_content')
+        producer.send('data-raw', b'Hello kitty!!')
 
     producer.flush()
     print 'all messages sent.'
