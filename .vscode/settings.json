@@ -1,0 +1,7 @@
+{
+    "python.pythonPath":"${WORKON_HOME}/ons-kafka/bin/python",
+    "python.autoComplete.extraPaths": [
+        "${WORKON_HOME}/ons-kafka/lib/python2.7",
+        "${WORKON_HOME}/ons-kafka/lib/python2.7/site-packages"
+     ]
+}
